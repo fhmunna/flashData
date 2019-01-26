@@ -1,8 +1,8 @@
 #see current directory
 cd
+#see current directory
+
 ls
-
-
 
 
 #Type the following command to rename foo folder to bar:
