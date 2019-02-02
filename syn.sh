@@ -5,9 +5,12 @@ git status
 #add un staged file
 git add .
 #commit changes
+
+read -p 'INSERT COMMIT MESSAGE: ' message
 git commit -m "
-$1
+$message
 "
+
 #show status before push
 git status
 #push 
