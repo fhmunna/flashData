@@ -54,3 +54,9 @@ git rm --cached <file>
 
 # for Folder
 git rm -r --cached path_to_your_folder/
+
+
+#reset  
+git reset --hard <hash_of_the_commit>
+git reset --soft HEAD@{1}
+git commit -m "Reverting to the state of the project at <hash_of_the_commit>"
