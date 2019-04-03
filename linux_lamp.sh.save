@@ -30,3 +30,17 @@ sudo nano /var/www/html/info.php
 
 
 sudo apt-get install phpmyadmin php-mbstring php-gettext -y.
+
+service apache2 status
+
+sudo nano /etc/php/7.1/apache2/php.ini
+
+#memory_limit  = 24M           
+#upload_max_filesize   = 20M             
+#register_globals = Off              
+#allow_url_fopen = On              
+#max_execution_time = 30
+#post_max_size = 20M      
+
+
+sudo systemctl restart apache2
