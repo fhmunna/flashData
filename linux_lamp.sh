@@ -29,4 +29,24 @@ sudo nano /var/www/html/info.php
 #VISIT>http://your_server_ip/info.php
 
 
-sudo apt-get install phpmyadmin php-mbstring php-gettext -y.
+sudo apt-get install phpmyadmin php-mbstring php-gettext -y
+sudo nano  /etc/apache2/apache2.conf
+#Include /etc/phpmyadmin/apache.conf
+/etc/init.d/apache2 restart
+
+sudo a2enmod rewrite
+
+sudo service apache2 restart
+#open the apache conf file
+sudo gedit /etc/apache2/apache2.conf
+
+#uncomment this line if commented
+#AccessFileName .htaccess
+
+#check the AllowOverride setings in the same file
+#<Directory /var/www/html/>
+#Options Indexes FollowSymLinks
+#AllowOverride All
+#Require all granted
+
+sudo service apache2 restart
