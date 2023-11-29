@@ -1,2 +1,0 @@
-SELECT TRIM(REPLACE(column, '\n','' )) from table;
-
