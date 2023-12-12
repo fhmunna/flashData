@@ -30,13 +30,17 @@ sudo nano /var/www/html/info.php
 
 
 sudo apt-get install phpmyadmin php-mbstring php-gettext -y
+# for ubuntu 22
+# sudo apt-get -y install php-php-gettext
 sudo nano  /etc/apache2/apache2.conf
 #Include /etc/phpmyadmin/apache.conf
 /etc/init.d/apache2 restart
 
-sudo a2enmod rewrite
 
+sudo a2enmod rewrite
 sudo service apache2 restart
+
+
 #open the apache conf file
 sudo gedit /etc/apache2/apache2.conf
 

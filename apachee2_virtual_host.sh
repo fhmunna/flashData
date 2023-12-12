@@ -21,6 +21,7 @@ echo "</html>" >> /var/www/$domainvalue/public_html/index.html
 sudo echo "#virtual Host Configuration for "$fomainvalue > /etc/apache2/sites-available/$domainvalue.conf
 sudo echo "<VirtualHost *:80>" >> /etc/apache2/sites-available/$domainvalue.conf
 sudo echo "ServerAdmin dhakamicro@gmail.com" >> /etc/apache2/sites-available/$domainvalue.conf
+sudo echo "ServerName "$domainvalue >> /etc/apache2/sites-available/$domainvalue.conf
 sudo echo "DocumentRoot /var/www/"$domainvalue"/public_html" >> /etc/apache2/sites-available/$domainvalue.conf
 sudo echo "ErrorLog ${APACHE_LOG_DIR}/error.log" >> /etc/apache2/sites-available/$domainvalue.conf
 sudo echo "CustomLog ${APACHE_LOG_DIR}/access.log combined" >> /etc/apache2/sites-available/$domainvalue.conf
