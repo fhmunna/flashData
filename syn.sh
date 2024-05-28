@@ -17,3 +17,4 @@ git status
 git push
 #show status after push
 git status
+git branch -a

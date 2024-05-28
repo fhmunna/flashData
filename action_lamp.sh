@@ -23,7 +23,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$randomr
 FLUSH PRIVILEGES;
 SELECT user,authentication_string,plugin,host FROM mysql.user;
 EOF
-
+				
 #Install PHP 7.2
 apt install php libapache2-mod-php php-mysql -y;
 
@@ -55,8 +55,11 @@ systemctl restart apache2 && echo "APACHe 2 reloaded";
 echo "Visit http://localhost/info.php";
 
 #Backup Default PHP COnfiguration
+mv /etc/php/7.2/apache2/php.ini /etc/php/7.2/apache2/php.ini_sample && echo "Default PHP Configuration BackedUP"
 
 #Generate new PHP Configuration (Development Mode)
+cp php.ini /etc/php/7.2/apache2/php.ini && echo "PHP  COnfiguration Updated";
+
 
 #Create New Secure User for MYSQL Access
 
