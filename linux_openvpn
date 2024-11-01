@@ -1,7 +1,0 @@
-sudo apt-get install openvpn
-
-
-
-sudo apt-get install network-manager-openvpn-gnome
-
-sudo apt install resolvconf
